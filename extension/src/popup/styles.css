@@ -1,0 +1,158 @@
+:root {
+  color-scheme: light;
+  --ink: #17212b;
+  --muted: #5b6876;
+  --line: #d8e0e8;
+  --safe: #16835d;
+  --warn: #b76a00;
+  --danger: #c73535;
+  --accent: #2367d1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 360px;
+  margin: 0;
+  color: var(--ink);
+  background: #f4f7fb;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.popup {
+  width: 360px;
+  background: #fff;
+}
+
+.popup-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #fbfcfe;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 720;
+}
+
+.shield {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--accent);
+  color: white;
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+}
+
+.pill {
+  border-radius: 999px;
+  padding: 5px 9px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid #bddfcf;
+  background: #ecfbf4;
+  color: #0f6848;
+}
+
+.pill.suspicious {
+  border-color: #f0c47f;
+  background: #fff5e6;
+  color: #7a4500;
+}
+
+.pill.high {
+  border-color: #f0adad;
+  background: #fff0f0;
+  color: #9f2424;
+}
+
+.score {
+  padding: 18px;
+  display: grid;
+  gap: 14px;
+}
+
+.meter-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.risk-title {
+  font-size: 20px;
+  font-weight: 760;
+}
+
+.domain {
+  color: var(--muted);
+  font-size: 13px;
+  margin-top: 3px;
+  max-width: 230px;
+  overflow-wrap: anywhere;
+}
+
+.risk-score {
+  color: var(--warn);
+  font-size: 32px;
+  font-weight: 780;
+}
+
+.meter {
+  height: 9px;
+  background: #e8eef5;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.bar {
+  width: 0%;
+  height: 100%;
+  background: var(--safe);
+}
+
+.bar.suspicious {
+  background: linear-gradient(90deg, var(--safe), var(--warn));
+}
+
+.bar.high {
+  background: linear-gradient(90deg, var(--warn), var(--danger));
+}
+
+.reasons {
+  display: grid;
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.reasons li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 8px;
+  color: #344150;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff2d8;
+  color: var(--warn);
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}

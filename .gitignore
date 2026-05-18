@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.superpowers/
+__pycache__/
+.pytest_cache/
+.venv/
+node_modules/
+dist/
+build/
+coverage/
