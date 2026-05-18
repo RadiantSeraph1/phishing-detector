@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PhishShield</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="popup">
+    <header class="popup-header">
+      <div class="brand"><span class="shield">S</span>PhishShield</div>
+      <span id="status" class="pill safe">Safe</span>
+    </header>
+    <section class="score">
+      <div class="meter-row">
+        <div>
+          <div id="title" class="risk-title">No scan result yet</div>
+          <div id="domain" class="domain">Open a login page to scan it.</div>
+        </div>
+        <div id="score" class="risk-score">0</div>
+      </div>
+      <div class="meter"><div id="bar" class="bar"></div></div>
+      <ul id="reasons" class="reasons"></ul>
+    </section>
+  </main>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
